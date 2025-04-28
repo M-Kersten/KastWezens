@@ -1,19 +1,18 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class WebcamController : MonoBehaviour
 {
     public RawImage[] displays;
-    [FormerlySerializedAs("CaptureButton")] public Button CaptureTrollButton;
+    public Button CaptureTrollButton;
     public Button CaptureButterflyButton;
     public string WebcamName;
     
     private WebCamTexture webcamTexture;
     private Texture2D processedTexture;
 
-    public Action<Texture2D, ScanType> OnCaptured;
+    public Action<string, ScanType> OnCaptured;
 
     void Start()
     {
@@ -42,7 +41,7 @@ public class WebcamController : MonoBehaviour
         processedTexture.SetPixels(webcamTexture.GetPixels());
         processedTexture.Apply();
         
-        ImageManager.SaveTexture(processedTexture, type);
-        OnCaptured.Invoke(processedTexture, type);
+        var path = ImageManager.SaveTexture(processedTexture, type);
+        OnCaptured.Invoke(path, type);
     }
 }

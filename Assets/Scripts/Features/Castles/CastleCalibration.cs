@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CastleCalibration : MonoBehaviour
 {
-    public CastleView[] Castles;
+    public CastleCalibrationView[] Castles;
     public float InputMultiplier;
 
-    private CastleView _selectedCastle;
+    private CastleCalibrationView selectedCastleCalibration;
     private bool _isCalibrating;
 
     public Action<bool> OnCalibratingStateChanged;
@@ -53,12 +53,12 @@ public class CastleCalibration : MonoBehaviour
             OnPositionInput?.Invoke(vectorInput);
     }
 
-    void SelectCastle([CanBeNull] CastleView castleView)
+    void SelectCastle([CanBeNull] CastleCalibrationView castleCalibrationView)
     {
-        _selectedCastle = castleView;
+        selectedCastleCalibration = castleCalibrationView;
         foreach (var castle in Castles)
         {
-            castle.SetSelected(castle == _selectedCastle);
+            castle.SetSelected(castle == selectedCastleCalibration);
         }
     }
 }

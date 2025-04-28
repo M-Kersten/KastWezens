@@ -46,7 +46,6 @@ public class TrollBeamerSpawner : MonoBehaviour
 
     private void SpawnTroll(string filePath)
     {
-        Debug.Log($"spawning troll: {filePath}");
         var randomOffset = new Vector3(
             Random.Range(SpawnRandomization.x, SpawnRandomization.y), 
             Random.Range(SpawnRandomization.z, SpawnRandomization.w),

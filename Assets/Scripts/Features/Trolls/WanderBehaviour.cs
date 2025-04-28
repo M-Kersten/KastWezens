@@ -1,17 +1,16 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class WanderBehaviour : MonoBehaviour
 {
     public float wanderRadius = 10f;
     public float wanderTimer = 5f;
-    [FormerlySerializedAs("_animator")] [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator;
 
-    NavMeshAgent agent;
-    float timer;
+    private NavMeshAgent agent;
+    private float timer;
     private bool _isWalking;
     private static readonly int Speed = Animator.StringToHash("Speed");
 
@@ -26,9 +25,7 @@ public class WanderBehaviour : MonoBehaviour
             if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1.0f, NavMesh.AllAreas)) {
                 agent.Warp(hit.position); // Forces the agent onto the NavMesh
             }
-
             _isWalking = true;
-
         });
     }
 
@@ -50,12 +47,10 @@ public class WanderBehaviour : MonoBehaviour
 
     static Vector3 RandomNavSphere(Vector3 origin, float dist)
     {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
+        var randDirection = Random.insideUnitSphere * dist;
         randDirection += origin;
 
-        NavMeshHit navHit;
-        NavMesh.SamplePosition(randDirection, out navHit, dist, NavMesh.AllAreas);
-
+        NavMesh.SamplePosition(randDirection, out var navHit, dist, NavMesh.AllAreas);
         return navHit.position;
     }
 }

@@ -1,12 +1,11 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 public class ButterflyBeamerSpawner : MonoBehaviour
 {
+    public ButterflyConfig Config;
     public ButterflyView ButterflyPrefab;
-    public Transform BeamerSpawnLocation;
-    public Vector4 SpawnRandomization;
+    public CastleManager CastleManager;
 
     private List<ButterflyView> _activeButterflies = new();
     
@@ -21,39 +20,31 @@ public class ButterflyBeamerSpawner : MonoBehaviour
             StartNightTimeRoutine();
     }
 
-    void StartNightTimeRoutine()
+    public void SpawnNewButterfly(string filePath)
     {
-        DOVirtual.DelayedCall(4, SpawnButterflies);
+        SpawnButterfly(filePath);
     }
 
-    private void SpawnButterflies()
+    void StartNightTimeRoutine()
     {
         foreach (var butterfly in _activeButterflies)
             Destroy(butterfly.gameObject);
         
         _activeButterflies.Clear();
-        
-        var textureFilePaths = PlayerPrefsList.LoadStringList(Consts.ButterflyKey);
-        
-        for (int i = 0; i < textureFilePaths.Count; i++)
-        {
-            var filePath = textureFilePaths[i];
-            DOVirtual.DelayedCall(i * .33f, () => SpawnButterfly(filePath));
-        }
     }
 
     private void SpawnButterfly(string filePath)
     {
-        var randomOffset = new Vector3(
-            Random.Range(SpawnRandomization.x, SpawnRandomization.y), 
-            Random.Range(SpawnRandomization.z, SpawnRandomization.w),
-            0);
-        var position = BeamerSpawnLocation.position + randomOffset;
-        
-        var newButterfly = Instantiate(ButterflyPrefab, position, ButterflyPrefab.transform.rotation);
+        var newButterfly = Instantiate(ButterflyPrefab, transform.position, ButterflyPrefab.transform.rotation);
         _activeButterflies.Add(newButterfly);
-        var texture = ImageManager.LoadTexture(filePath);
-        newButterfly.InitializeTexture(texture);
-        newButterfly.Initialize(GameState.NightTime);
+        newButterfly.InitializeTexture(filePath);
+        newButterfly.Initialize(GameState.NightTime, Config, CastleManager);
+
+        if (_activeButterflies.Count > Config.MaxBeamerButterflies)
+        {
+            var longestLivingButterfly = _activeButterflies[0];
+            _activeButterflies.Remove(longestLivingButterfly);
+            Destroy(longestLivingButterfly);
+        }
     }
 }

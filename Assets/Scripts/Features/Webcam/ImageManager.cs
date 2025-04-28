@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class ImageManager
 {
-    public static void SaveTexture(Texture2D textureToSave, ScanType scanType)
+    public static string SaveTexture(Texture2D textureToSave, ScanType scanType)
     {
         var _filePath = Path.Combine("Assets/Resources/ScannedDrawings");
         if (!Directory.Exists(_filePath))
@@ -24,6 +24,8 @@ public static class ImageManager
         };
 
         PlayerPrefsList.AppendToList(key, textureFilePath);
+
+        return textureFilePath;
     }
 
     public static Texture2D LoadTexture(string filePath)

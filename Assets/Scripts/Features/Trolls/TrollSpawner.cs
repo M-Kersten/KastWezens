@@ -21,7 +21,7 @@ public class TrollSpawner : MonoBehaviour
             PlayerPrefsList.ClearList(Consts.TrollKey);
 
         foreach (var filePath in PlayerPrefsList.LoadStringList(Consts.TrollKey))
-            SpawnSavedTroll(ImageManager.LoadTexture(filePath));
+            SpawnSavedTroll(filePath);
         
         NightTimeButton.onClick.AddListener(NightTimeRoutine);
         WebcamController.OnCaptured += OnCaptured;
@@ -46,19 +46,19 @@ public class TrollSpawner : MonoBehaviour
         _activeTrolls.Clear();
     }
 
-    private void OnCaptured(Texture2D newTrollTexture, ScanType type)
+    private void OnCaptured(string filePath, ScanType type)
     {
         if (type == ScanType.Troll)
-            SpawnSavedTroll(newTrollTexture);
+            SpawnSavedTroll(filePath);
     }
 
-    void SpawnSavedTroll(Texture2D newTrollTexture)
+    void SpawnSavedTroll(string filePath)
     {
         SpawnParticles.Play();
         var position = SpawnLocation.position;
         var newTroll = Instantiate(TrollPrefab, position, Quaternion.identity);
         newTroll.transform.eulerAngles = new Vector3(0, 180, 0);
         _activeTrolls.Add(newTroll);
-        newTroll.InitializeTexture(newTrollTexture);
+        newTroll.InitializeTexture(filePath);
     }
 }
