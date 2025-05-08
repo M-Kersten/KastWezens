@@ -20,4 +20,4 @@ MonoBehaviour:
   CastleSwitchInterval: {x: 6, y: 12}
   MaxBoxButterflies: 5
   MaxBeamerButterflies: 5
-  MaxBoxDuration: 30
+  MaxBoxDuration: 1200

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84706688f5147cb9fd0a5447210825d, type: 3}
+  m_Name: BeamerButterflyConfig
+  m_EditorClassIdentifier: 
+  Speed: 2.5
+  TurnSpeed: 120
+  AvoidDistance: 3
+  NoiseStrength: 0.5
+  NoiseFrequency: 0.5
+  CastleSwitchInterval: {x: 6, y: 12}
+  MaxBoxButterflies: 5
+  MaxBeamerButterflies: 5
+  MaxBoxDuration: 1200

@@ -26,7 +26,8 @@ public class ButterflyView : TexturedView
     private void Awake()
     {
         _isMoving = false;
-        _originalCanvasRotation = CanvasDisplay.transform.rotation;
+        if (CanvasDisplay != null)
+            _originalCanvasRotation = CanvasDisplay.transform.rotation;
     }
 
     public void Initialize(GameState state, ButterflyConfig config, CastleManager castleManager = null)
@@ -110,7 +111,8 @@ public class ButterflyView : TexturedView
 
         vlinderModel.rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
 
-        CanvasDisplay.transform.rotation = _originalCanvasRotation;
+        if (CanvasDisplay != null)
+            CanvasDisplay.transform.rotation = _originalCanvasRotation;
     }
 
     bool IsDirectionSafe(Vector3 direction)

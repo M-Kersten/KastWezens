@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7624491003253080060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -207,8 +207,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00016551, y: 1.2388, z: -0.01134}
-  m_LocalScale: {x: 0.74367, y: 0.74367, z: 0.74367}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7921622597727175295}
   - {fileID: 5835033790406224615}
@@ -246,7 +246,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1fff90b0b6a1640fea32b47ce55afd75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
   - {fileID: 4971295444589306245}
   vlinderModel: {fileID: 5835033790406224615}
   _spawnParticles: {fileID: 8016212633413050161}
-  CanvasDisplay: {fileID: 3482947152926651108}
+  CanvasDisplay: {fileID: 0}
 --- !u!1001 &6300691100271971596
 PrefabInstance:
   m_ObjectHideFlags: 0

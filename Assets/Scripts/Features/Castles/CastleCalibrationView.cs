@@ -57,7 +57,7 @@ public class CastleCalibrationView : MonoBehaviour
 
     private void ScaleCastle(Vector3 scaleAdjust)
     {
-        transform.localScale += scaleAdjust;
+        //transform.localScale += scaleAdjust;
         UpdateLabels();
     }
 }

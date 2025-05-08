@@ -5,21 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a89481ea-fb99-4882-9f5c-b6b9f7f83e48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibrationView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibrationView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/OpenCVProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/OpenCVProcessor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/OpenCVUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/OpenCVUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/ScriptableObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/ScriptableObjects/OpenCVSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/ScriptableObjects/OpenCVSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KastWezens/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KastWezens/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Vlinder.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Vlinder.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/Uduino.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/Uduino.cpp.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/Uduino.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/Uduino.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/BareMinimum.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/BareMinimum/BareMinimum.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/BareMinimum/BareMinimum.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ButtonTrigger.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ButtonTrigger/ButtonTrigger.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ButtonTrigger/ButtonTrigger.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/EncoderLibrary.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/EncoderLibrary/EncoderLibrary.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/EncoderLibrary/EncoderLibrary.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/LedIntensity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/LedIntensity/LedIntensity.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/LedIntensity/LedIntensity.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ReadSensor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ReadSensor/ReadSensor.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/ReadSensor/ReadSensor.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Servo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Servo/Servo.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Servo/Servo.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Uduino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Uduino/Uduino.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/examples/Uduino/Uduino.ino.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Uduino/Arduino/libraries/Uduino/keywords.txt.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BeamerVlinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BeamerVlinder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Castle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Castle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vlinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Vlinder.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflyBeamerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflyBeamerSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Arduino/ArduinoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Arduino/ArduinoManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflyView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibrationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Castles/CastleCalibrationView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/WebcamController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Webcam/WebcamController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/ButterflyConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ButterflyConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +69,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Arduino/ArduinoManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Butterfly/ButterflyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Trolls/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
@@ -132,6 +172,9 @@
       <workItem from="1744891729168" duration="202000" />
       <workItem from="1745232826550" duration="2680000" />
       <workItem from="1745419149376" duration="4605000" />
+      <workItem from="1745527461144" duration="18931000" />
+      <workItem from="1746100113080" duration="12421000" />
+      <workItem from="1746627179891" duration="4498000" />
     </task>
     <servers />
   </component>

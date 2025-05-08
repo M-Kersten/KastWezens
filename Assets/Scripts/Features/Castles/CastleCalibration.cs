@@ -48,9 +48,14 @@ public class CastleCalibration : MonoBehaviour
         var shiftHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
         if (shiftHeld)
-            OnScaleInput?.Invoke(vectorInput);
-        else
+        {
+            vectorInput = new Vector3(0, 0, vertical * InputMultiplier);
             OnPositionInput?.Invoke(vectorInput);
+        }
+        else
+        {
+            OnPositionInput?.Invoke(vectorInput);
+        }    
     }
 
     void SelectCastle([CanBeNull] CastleCalibrationView castleCalibrationView)
